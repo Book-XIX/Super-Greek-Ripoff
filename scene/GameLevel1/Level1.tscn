@@ -33,11 +33,12 @@ points = PoolVector2Array( 59, 59, 0, 59, 0, 0, 59, 0 )
 [node name="main" type="Node2D"]
 position = Vector2( 10, 0 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( -480, 45 )
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+position = Vector2( 480, -45 )
+current = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 2 )

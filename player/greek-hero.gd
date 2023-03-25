@@ -39,15 +39,15 @@ func _physics_process(delta) -> void:
 	elif is_jump_cancelled:
 		_velocity.y = 0.0
 	elif is_idling:
-		$greek_hero.animation = "IDLE"
+		$greek_hero.animation = "IDLE-loop"
 		_jumps_made = 0
 	elif is_running:
 		if _velocity.x > 0:
 			$greek_hero.flip_h= false
-			$greek_hero.play("WALK")
+			$greek_hero.play("WALK-loop")
 		elif _velocity.x < 0:
 			$greek_hero.flip_h = true
-			$greek_hero.play("WALK")
+			$greek_hero.play("WALK-loop")
 		_jumps_made = 0
 
 	_velocity = move_and_slide(_velocity, UP_DIRECTION)

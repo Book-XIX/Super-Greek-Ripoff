@@ -213,7 +213,7 @@ animations = [ {
 }, {
 "frames": [ SubResource( 37 ), SubResource( 38 ) ],
 "loop": true,
-"name": "IDLE",
+"name": "IDLE-loop",
 "speed": 2.0
 }, {
 "frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
@@ -227,9 +227,9 @@ animations = [ {
 "speed": 10.0
 }, {
 "frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
-"loop": false,
-"name": "WALK",
-"speed": 5.0
+"loop": true,
+"name": "WALK-loop",
+"speed": 8.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=36]
@@ -242,7 +242,7 @@ script = ExtResource( 1 )
 [node name="greek_hero" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
-animation = "IDLE"
+animation = "IDLE-loop"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
