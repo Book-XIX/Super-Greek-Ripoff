@@ -10,11 +10,14 @@ export var jump_strength := 1500.0
 var _jumps_made := 0
 var _velocity := Vector2.ZERO
 
-var _is_alive := 1
+var _is_alive := true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
+
+func death():
+	get_tree().change_scene("res://scene/StartMenu/start_menu.tscn")
 
 #func _process(delta):
 
@@ -50,7 +53,7 @@ func _physics_process(delta) -> void:
 			$greek_hero.play("WALK-loop")
 		_jumps_made = 0
 		
-	
+	#_is_alive.connect("die", self, "death")
 
 	_velocity = move_and_slide(_velocity, UP_DIRECTION)
 
