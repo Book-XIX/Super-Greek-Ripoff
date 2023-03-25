@@ -3,11 +3,12 @@
 [ext_resource path="res://player/greek-hero.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/music/LevelTheme.wav" type="AudioStream" id=2]
 [ext_resource path="res://assets/map/NEWNEWsandstone.png" type="Texture" id=3]
-[ext_resource path="res://enemies/boar/boar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://enemy/boar/boar.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/map/not-so-shitty-wall.png" type="Texture" id=5]
 [ext_resource path="res://assets/map/Spikes.png" type="Texture" id=6]
 [ext_resource path="res://assets/map/log-flooring.png" type="Texture" id=7]
 [ext_resource path="res://scene/GameLevel1/Level1.gd" type="Script" id=8]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 59, 59, 0, 59, 0, 0, 59, 0 )

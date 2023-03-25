@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://player/greek-hero.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/music/LevelTheme.wav" type="AudioStream" id=2]
@@ -6,8 +6,7 @@
 [ext_resource path="res://assets/map/Spikes.png" type="Texture" id=4]
 [ext_resource path="res://assets/map/not-so-shitty-wall.png" type="Texture" id=5]
 [ext_resource path="res://assets/map/log-flooring.png" type="Texture" id=6]
-[ext_resource path="res://enemies/boar/boar.tscn" type="PackedScene" id=7]
-[ext_resource path="res://boar/boar.tscn" type="PackedScene" id=8]
+[ext_resource path="res://enemy/boar/boar.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scene/GameLevel1/end game.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
@@ -212,13 +211,13 @@ tile_data = PoolIntArray( -1245020, 0, 0, -1179484, 0, 0, -1113948, 0, 0, -10484
 [node name="heaven" parent="." instance=ExtResource( 9 )]
 position = Vector2( 9591, -325 )
 
-[node name="Boar2" parent="." instance=ExtResource( 7 )]
+[node name="Boar2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 5722, 45 )
 
-[node name="Boar" parent="." instance=ExtResource( 7 )]
+[node name="Boar" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1722, 49 )
 
-[node name="Boar3" parent="." instance=ExtResource( 7 )]
+[node name="Boar3" parent="." instance=ExtResource( 8 )]
 position = Vector2( 4364, 47 )
 
 [node name="Boar4" parent="." instance=ExtResource( 8 )]
