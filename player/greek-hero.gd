@@ -7,6 +7,8 @@ export var max_jumps := 1
 export var gravity := 4500.0
 export var jump_strength := 1500.0
 
+onready var player = get_node("AnimationPlayer")
+
 var _jumps_made := 0
 var _velocity := Vector2.ZERO
 
@@ -15,9 +17,6 @@ var _is_alive := true
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
-func death():
-	get_tree().change_scene("res://scene/StartMenu/start_menu.tscn")
 
 #func _process(delta):
 
@@ -35,26 +34,35 @@ func _physics_process(delta) -> void:
 	var is_idling:= is_on_floor() and is_zero_approx(_velocity.x)
 	var is_running := is_on_floor() and not is_zero_approx(_velocity.x)
 
-	if is_jumping:
+	if is_jumping and _is_alive == true:
 		_jumps_made += 1
 		_velocity.y = -jump_strength
 		$greek_hero.play("JUMP")
-	elif is_jump_cancelled:
+	elif is_jump_cancelled and _is_alive == true:
 		_velocity.y = 0.0
-	elif is_idling:
+	elif is_idling and _is_alive == true:
 		$greek_hero.animation = "IDLE-loop"
 		_jumps_made = 0
-	elif is_running:
+	elif is_running and _is_alive == true:
 		if _velocity.x > 0:
 			$greek_hero.flip_h= false
 			$greek_hero.play("WALK-loop")
-		elif _velocity.x < 0:
+		elif _velocity.x < 0 and _is_alive == true:
 			$greek_hero.flip_h = true
 			$greek_hero.play("WALK-loop")
 		_jumps_made = 0
-		
-	#_is_alive.connect("die", self, "death")
-
 	_velocity = move_and_slide(_velocity, UP_DIRECTION)
+		
+	
 
-	pass
+
+
+func _on_Area2D_body_entered(body):
+	if body.name == "Boar":
+		print("touched")
+		_is_alive = false
+		$greek_hero.animation = "DIE"
+		player.connect("finished", self, "death")
+	
+func death():
+	get_tree().change_scene("res://scene/GameOver/new scene.tscn")

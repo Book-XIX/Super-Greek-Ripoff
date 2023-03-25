@@ -207,7 +207,7 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
-"loop": true,
+"loop": false,
 "name": "DIE",
 "speed": 5.0
 }, {
@@ -244,7 +244,6 @@ script = ExtResource( 1 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
 animation = "IDLE-loop"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -266,3 +265,11 @@ visible = false
 visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spear_left"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -3, 3 )
+shape = SubResource( 36 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

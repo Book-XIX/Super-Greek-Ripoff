@@ -4,12 +4,9 @@ var direction = Vector2.LEFT
 var velocity = Vector2.ZERO
 var dircheck = 0
 
-onready var Check_Ledge: = $Check_Ledge
-
 func _physics_process(delta):
 	
 	var found_wall = is_on_wall()
-	# var found_ledge = not Check_Ledge.is_colliding()
 	
 	if found_wall: 
 		direction *= -1
@@ -24,5 +21,3 @@ func _physics_process(delta):
 	velocity = direction * 150
 	move_and_slide(velocity, Vector2.UP)
 
-	
-	
