@@ -21,7 +21,7 @@ func _physics_process(delta):
 			$AnimatedSprite.flip_h = true
 			dircheck = 0
 	
-	velocity = direction * 100
+	velocity = direction * 150
 	move_and_slide(velocity, Vector2.UP)
 
 	
