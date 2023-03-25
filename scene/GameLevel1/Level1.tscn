@@ -33,6 +33,7 @@
 1/z_index = 0
 
 [node name="main" type="Node2D"]
+position = Vector2( 10, 0 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )

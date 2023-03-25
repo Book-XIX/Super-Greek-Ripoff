@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scene/StartMenu/start_menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/mainmenu/MainMenu.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/music/MenuTheme.wav" type="AudioStream" id=3]
 
 [node name="MenuUI" type="Control"]
 anchor_right = 1.0
@@ -15,21 +16,37 @@ texture = ExtResource( 2 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_bottom = 1.0
-margin_left = 31.0
-margin_top = 242.0
-margin_right = 360.0
-margin_bottom = -191.0
+margin_left = 26.0
+margin_top = 254.0
+margin_right = 355.0
+margin_bottom = -179.0
 
 [node name="Startbutton" type="Button" parent="VBoxContainer"]
 margin_right = 329.0
 margin_bottom = 20.0
+focus_neighbour_left = NodePath("../Quitbutton")
+focus_neighbour_top = NodePath("../Quitbutton")
+focus_neighbour_right = NodePath("../Quitbutton")
+focus_neighbour_bottom = NodePath("../Quitbutton")
+focus_next = NodePath("../Quitbutton")
+focus_previous = NodePath("../Quitbutton")
 text = "START"
 
 [node name="Quitbutton" type="Button" parent="VBoxContainer"]
 margin_top = 24.0
 margin_right = 329.0
 margin_bottom = 44.0
+focus_neighbour_left = NodePath("../Startbutton")
+focus_neighbour_top = NodePath("../Startbutton")
+focus_neighbour_right = NodePath("../Startbutton")
+focus_neighbour_bottom = NodePath("../Startbutton")
+focus_next = NodePath("../Startbutton")
+focus_previous = NodePath("../Startbutton")
 text = "QUIT"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Startbutton" to="." method="_on_Startbutton_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quitbutton" to="." method="_on_Quitbutton_pressed"]
