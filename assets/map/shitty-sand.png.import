@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/greek-hero-walking-upscale5.jpg-730bd2225b401a0b1ea556a25a83472a.stex"
+path="res://.import/shitty-sand.png-2869823f08814d6204120f581dc15e95.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://greek-hero-walking-upscale5.jpg"
-dest_files=[ "res://.import/greek-hero-walking-upscale5.jpg-730bd2225b401a0b1ea556a25a83472a.stex" ]
+source_file="res://assets/map/shitty-sand.png"
+dest_files=[ "res://.import/shitty-sand.png-2869823f08814d6204120f581dc15e95.stex" ]
 
 [params]
 

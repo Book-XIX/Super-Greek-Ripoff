@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/greek-hero-walking-upscale10.jpg-de7e58d608f68b2fef2b9f79b0ab7a3a.stex"
+path="res://.import/greek-hero-walking-upscale9.jpg-121845ea2ce474482f8215ff31684136.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://greek-hero-walking-upscale10.jpg"
-dest_files=[ "res://.import/greek-hero-walking-upscale10.jpg-de7e58d608f68b2fef2b9f79b0ab7a3a.stex" ]
+source_file="res://assets/greek-hero/greek-hero-walking-upscale9.jpg"
+dest_files=[ "res://.import/greek-hero-walking-upscale9.jpg-121845ea2ce474482f8215ff31684136.stex" ]
 
 [params]
 
