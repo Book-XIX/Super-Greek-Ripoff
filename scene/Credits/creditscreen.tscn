@@ -1,0 +1,27 @@
+[gd_scene format=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 222.0
+margin_top = 129.0
+margin_right = -237.0
+margin_bottom = -108.0
+text = "CREDITS:
+
+Programmers:
+Caden Ziskie
+Benedicto Elpidius
+Syngchan Min
+Branden Husted (?)
+
+Artists:
+Caden Ziskie
+Syngchan Min
+
+Music:
+Syngchan Min"
