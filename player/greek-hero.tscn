@@ -237,6 +237,7 @@ radius = 11.0
 height = 132.0
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
+collision_layer = 2
 script = ExtResource( 1 )
 
 [node name="greek_hero" type="AnimatedSprite" parent="."]

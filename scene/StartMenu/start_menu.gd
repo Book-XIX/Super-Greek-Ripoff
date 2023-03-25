@@ -13,7 +13,7 @@ func _ready():
 
 	
 func _on_Startbutton_pressed():
-	get_tree().change_scene("res://scene/GameLevel1/Level1.tscn")
+	get_tree().change_scene("res://scene/DemoLevelV3.tscn")
 
 
 func _on_Quitbutton_pressed():

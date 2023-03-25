@@ -49,6 +49,7 @@ func _physics_process(delta) -> void:
 			$greek_hero.flip_h = true
 			$greek_hero.play("WALK-loop")
 		_jumps_made = 0
+		
 
 	_velocity = move_and_slide(_velocity, UP_DIRECTION)
 
