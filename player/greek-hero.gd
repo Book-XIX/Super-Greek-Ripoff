@@ -5,10 +5,12 @@ const UP_DIRECTION := Vector2.UP
 export var speed := 600.0
 export var max_jumps := 1
 export var gravity := 4500.0
-export var jump_strength := 100.0
+export var jump_strength := 1500.0
 
 var _jumps_made := 0
 var _velocity := Vector2.ZERO
+
+var _is_alive := 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
