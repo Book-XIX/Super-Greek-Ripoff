@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://player/greek-hero.gd" type="Script" id=1]
 [ext_resource path="res://assets/greek-hero/greek-hero-running.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/greek-hero/greek-hero-death.png" type="Texture" id=6]
 [ext_resource path="res://assets/greek-hero/greek-hero-drop-n-cover.png" type="Texture" id=7]
 [ext_resource path="res://assets/greek-hero/greek-hero-drop-n-cover-still.png" type="Texture" id=8]
+[ext_resource path="res://player/greek_hero.gd" type="Script" id=9]
 
 [sub_resource type="AtlasTexture" id=28]
 flags = 4
@@ -245,6 +246,7 @@ scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
 animation = "IDLE-loop"
 playing = true
+script = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -3, 3 )

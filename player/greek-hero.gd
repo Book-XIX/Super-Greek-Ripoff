@@ -25,9 +25,10 @@ func _physics_process(delta) -> void:
 		Input.get_action_strength("move_right")
 		- Input.get_action_strength("move_left")
 	)
-
-	_velocity.x = _horizon_dir * speed
-	_velocity.y += gravity * delta
+	
+	if _is_alive == true:
+		_velocity.x = _horizon_dir * speed
+		_velocity.y += gravity * delta
 
 	var is_jumping := Input.is_action_just_pressed("jump") and is_on_floor()
 	var is_jump_cancelled := Input.is_action_just_released("jump") and _velocity.y < 0.0
@@ -55,14 +56,55 @@ func _physics_process(delta) -> void:
 		
 	
 
-
-
 func _on_Area2D_body_entered(body):
 	if body.name == "Boar":
 		print("touched")
 		_is_alive = false
+		_velocity.x = 0
+		_velocity.y = 0
 		$greek_hero.animation = "DIE"
-		player.connect("finished", self, "death")
-	
-func death():
-	get_tree().change_scene("res://scene/GameOver/new scene.tscn")
+		
+	if body.name == "Boar2":
+		print("touched")
+		_is_alive = false
+		_velocity.x = 0
+		_velocity.y = 0
+		$greek_hero.animation = "DIE"
+		
+	if body.name == "Boar3":
+		print("touched")
+		_is_alive = false
+		_velocity.x = 0
+		_velocity.y = 0
+		$greek_hero.animation = "DIE"
+		
+	if body.name == "yikes":
+		print("touched")
+		_is_alive = false
+		_velocity.x = 0
+		_velocity.y = 0
+		$greek_hero.animation = "DIE"
+		
+	if body.name == "yikes2":
+		print("touched")
+		_is_alive = false
+		_velocity.x = 0
+		_velocity.y = 0
+		$greek_hero.animation = "DIE"
+		
+	if body.name == "yikes3":
+		print("touched")
+		_is_alive = false
+		_velocity.x = 0
+		_velocity.y = 0
+		$greek_hero.animation = "DIE"
+		
+	if body.name == "yikes4":
+		print("touched")
+		_is_alive = false
+		_velocity.x = 0
+		_velocity.y = 0
+		$greek_hero.animation = "DIE"
+		
+	if body.name == "heaven":
+		get_tree().change_scene("res://scene/Credits/creditscreen.tscn")
