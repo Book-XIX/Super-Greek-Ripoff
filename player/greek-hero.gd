@@ -75,14 +75,20 @@ func _on_Area2D_body_entered(body):
 		_velocity.x = 0
 		_velocity.y = 0
 		$greek_hero.animation = "DIE"
-		
-	if body.name == "Yikes":
+	
+	if body.name == "Boar4":
+		print("touched")
+		_is_alive = false
+		_velocity.x = 0
+		_velocity.y = 0
+		$greek_hero.animation = "DIE"	
+	
+	if body.name == "Boar5":
 		print("touched")
 		_is_alive = false
 		_velocity.x = 0
 		_velocity.y = 0
 		$greek_hero.animation = "DIE"
-
-		
+	
 	if body.name == "heaven":
 		get_tree().change_scene("res://scene/Credits/creditscreen.tscn")

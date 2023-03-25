@@ -20,13 +20,18 @@ Programmers:
 Caden Ziskie
 Benedicto Elpidius
 Syngchan Min
-Branden Husted (?)
+Brandon Husted (?)
 
 Artists:
 Caden Ziskie
 Syngchan Min
 
 Music:
+Syngchan Min
+
+Playtester:
+Branden Husted
+Caden Ziskie
 Syngchan Min"
 
 [node name="ReturntoMenu" type="Button" parent="."]
