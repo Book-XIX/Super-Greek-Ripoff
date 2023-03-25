@@ -221,8 +221,10 @@ animations = [ {
 script = ExtResource( 1 )
 
 [node name="greek_hero" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
-animation = "CROUCH_STATE"
+animation = "WALK"
+frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
