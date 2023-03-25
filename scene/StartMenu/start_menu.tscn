@@ -38,31 +38,46 @@ texture = ExtResource( 2 )
 anchor_bottom = 1.0
 margin_left = 49.0
 margin_top = 240.0
-margin_right = 340.0
-margin_bottom = -185.0
+margin_right = 255.0
+margin_bottom = -328.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = SubResource( 6 )
 
 [node name="Startbutton" type="Button" parent="VBoxContainer"]
-margin_right = 291.0
+margin_right = 206.0
 margin_bottom = 14.0
 focus_neighbour_left = NodePath("../Quitbutton")
 focus_neighbour_top = NodePath("../Quitbutton")
-focus_neighbour_right = NodePath("../Quitbutton")
-focus_neighbour_bottom = NodePath("../Quitbutton")
-focus_next = NodePath("../Quitbutton")
+focus_neighbour_right = NodePath("../CreditButton")
+focus_neighbour_bottom = NodePath("../CreditButton")
+focus_next = NodePath("../CreditButton")
 focus_previous = NodePath("../Quitbutton")
+size_flags_stretch_ratio = 0.0
 text = "START"
 
-[node name="Quitbutton" type="Button" parent="VBoxContainer"]
+[node name="CreditButton" type="Button" parent="VBoxContainer"]
 margin_top = 18.0
-margin_right = 291.0
+margin_right = 206.0
 margin_bottom = 32.0
 focus_neighbour_left = NodePath("../Startbutton")
 focus_neighbour_top = NodePath("../Startbutton")
+focus_neighbour_right = NodePath("../Quitbutton")
+focus_neighbour_bottom = NodePath("../Quitbutton")
+focus_next = NodePath("../Quitbutton")
+focus_previous = NodePath("../Startbutton")
+text = "CREDITS"
+
+[node name="Quitbutton" type="Button" parent="VBoxContainer"]
+margin_top = 36.0
+margin_right = 206.0
+margin_bottom = 50.0
+focus_neighbour_left = NodePath("../CreditButton")
+focus_neighbour_top = NodePath("../CreditButton")
 focus_neighbour_right = NodePath("../Startbutton")
 focus_neighbour_bottom = NodePath("../Startbutton")
 focus_next = NodePath("../Startbutton")
-focus_previous = NodePath("../Startbutton")
+focus_previous = NodePath("../CreditButton")
 text = "QUIT"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -70,4 +85,5 @@ stream = ExtResource( 3 )
 autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Startbutton" to="." method="_on_Startbutton_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreditButton" to="." method="_on_CreditButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quitbutton" to="." method="_on_Quitbutton_pressed"]

@@ -18,3 +18,7 @@ func _on_Startbutton_pressed():
 
 func _on_Quitbutton_pressed():
 	get_tree().quit()
+
+
+func _on_CreditButton_pressed():
+	get_tree().change_scene("res://scene/Credits/creditscreen.tscn")
