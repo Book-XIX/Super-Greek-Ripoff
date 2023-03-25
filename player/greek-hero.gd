@@ -7,8 +7,6 @@ export var max_jumps := 1
 export var gravity := 4500.0
 export var jump_strength := 1500.0
 
-onready var player = get_node("AnimationPlayer")
-
 var _jumps_made := 0
 var _velocity := Vector2.ZERO
 
@@ -78,33 +76,13 @@ func _on_Area2D_body_entered(body):
 		_velocity.y = 0
 		$greek_hero.animation = "DIE"
 		
-	if body.name == "yikes":
+	if body.name == "Yikes":
 		print("touched")
 		_is_alive = false
 		_velocity.x = 0
 		_velocity.y = 0
 		$greek_hero.animation = "DIE"
-		
-	if body.name == "yikes2":
-		print("touched")
-		_is_alive = false
-		_velocity.x = 0
-		_velocity.y = 0
-		$greek_hero.animation = "DIE"
-		
-	if body.name == "yikes3":
-		print("touched")
-		_is_alive = false
-		_velocity.x = 0
-		_velocity.y = 0
-		$greek_hero.animation = "DIE"
-		
-	if body.name == "yikes4":
-		print("touched")
-		_is_alive = false
-		_velocity.x = 0
-		_velocity.y = 0
-		$greek_hero.animation = "DIE"
+
 		
 	if body.name == "heaven":
 		get_tree().change_scene("res://scene/Credits/creditscreen.tscn")
